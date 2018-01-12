@@ -15,6 +15,7 @@ import scala.concurrent.{ExecutionContext, Future}
 // but it is not the case - consider to look at how implicit does look up:
 
 // 1. adding a value into implicit scope
+// 1.将一个值添加到隐式范围中
 import ExecutionContext.Implicits.global  // ! it is in use
 
 object ExecutionContextTrap {
@@ -24,6 +25,7 @@ object ExecutionContextTrap {
     val pool = Executors.newFixedThreadPool(4)
 
     // 2. adding value into implicit scope
+    // 2. 将值添加到隐式范围中
     implicit val ec: ExecutionContext = ExecutionContext.fromExecutor(pool)
 
     println("global:" + ExecutionContext.Implicits.global)    // ExecutionContextImpl

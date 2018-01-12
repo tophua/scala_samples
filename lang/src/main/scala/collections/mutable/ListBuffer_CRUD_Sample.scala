@@ -40,7 +40,7 @@ object ListBuffer_CRUD_Sample extends App {
     def delete(user:User) = {  // delete by object ref / instance
 
       val zipped = users.zipWithIndex   // #zipWithIndex example usage
-
+      println("zipWithIndex=>"+zipped.mkString(","))
       val optionResult = zipped find(_._1 == user) // then find user by ID
 
       if (optionResult.isDefined) {

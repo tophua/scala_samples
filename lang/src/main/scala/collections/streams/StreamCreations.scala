@@ -11,6 +11,7 @@ object StreamCreations extends App {
 
   // #1
   {
+    //永不结束循环
     def makeStream : Stream[Int] = Stream.cons(util.Random.nextInt(10), makeStream)  // never ending loop
 
     val infinate = makeStream

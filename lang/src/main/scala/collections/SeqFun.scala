@@ -5,11 +5,12 @@ package collections
 object SeqFun extends App {
 
   def first(f: Int => Int) = {
+    //取出第一个值
    f(0)
   }
 
   def second(f: Int => Int) = {
-    f(1)
+    f(1) //取出第二个值
   }
 
   val s = Seq[Int](1,2,3)
@@ -21,7 +22,7 @@ object SeqFun extends App {
   println(restul_2)
 
   // actually it is partial function
-
+  // 其实是部分功能
   println( "isDefined: " + s.isDefinedAt(2) ) // true
   println( "isDefined: " + s.isDefinedAt(3) ) // false
 }
