@@ -10,13 +10,13 @@ package apply_method
 //显示一般用例：如何使用apply方法作为工厂方法
 
 class A(x:Int)
-//这个类没有伴侣对象
+//这个类没有伴生对象
 class B(x:Int) // this class does not have companion object
 
 // companion object
-//伴侣对象
+//伴生对象
 object A { // why do we use "object" here, but not "class"? because we want to use "()" method as class' constructor has
-  //为什么我们在这里使用“object”，而不是“class”呢？ 因为我们要使用“（）”方法作为类的构造函数
+  //为什么我们在这里使用“object”，而不是“class”呢？ 因为我们要使用“（)”方法作为类的构造函数
   def apply(x:Int) = new A(x) // #factory-method related
 
 }

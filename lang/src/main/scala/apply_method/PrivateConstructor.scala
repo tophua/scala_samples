@@ -6,7 +6,7 @@ class Person007 private (val name:String)
 
 object Person007 {
   def apply(name:String) : Person007 = {
-    //伴侣对象可以访问私有构造函数
+    //伴生对象可以访问私有构造函数
     new Person007(name)      // companion object has access to private constructor
   }
 }
