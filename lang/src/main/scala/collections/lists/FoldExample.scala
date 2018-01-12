@@ -15,7 +15,7 @@ object FoldExample extends App {
     val result1 = List(1,2,3).foldLeft(0)(_ + _)
 
     // empty list will work, because initial value is set to 0 ('reduceLeft' would not work [#reduce related] )
-
+    //空列表将工作，因为初始值设置为0
     val result2 = List[Int]().foldLeft(0)(_ + _)
 
     println (result1) // 6
@@ -24,6 +24,7 @@ object FoldExample extends App {
   }
 
   // traversing the list by foldRight
+  //通过foldRight遍历列表
   {
     val list = List(1,2,3)
       list.foldRight(List[Int]()) { (right, result) =>
@@ -33,6 +34,7 @@ object FoldExample extends App {
   }
 
   // traversing the list by foldLeft
+  //通过foldLeft遍历列表
   {
     val list = List(1,2,3)
     list.foldLeft(List[Int]()) { (result, left) =>

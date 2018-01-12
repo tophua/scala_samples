@@ -1,8 +1,9 @@
 package lists
 
 // This file contains very simple examples of most interesting method in List class
-
+//这个文件包含List类中最有趣的方法的非常简单的例子
 // The full list of methods is defined here:
+//这里定义了完整的方法列表：
 // http://www.scala-lang.org/api/current/index.html#scala.collection.immutable.List
 
 // #list #genaral
@@ -12,9 +13,11 @@ object ListMethods extends App {
   val list = List("a","b","c")
 
   // 1. take
+  //取N个元素(N不是索引！),输出：List（a）
   println("take(1): " + list.take(1) ) // Takes N elements (N is not index!). Output:  List(a)
 
   // 2. drop
+  //删除前N个元素。 输出：列表（c）
   println ("drop(2): " + list.drop(2) ) // Drops first N elements. Output: List(c)
 
   // 3. reverse
@@ -24,9 +27,11 @@ object ListMethods extends App {
   println ("list.head: " + list.head) // Output:a
 
   // 5. tail
+  //除去第一个元素之外
   println ("list.tail: " + list.tail) // Output:  List(b, c)
 
   // 5.1
+  //除去最后一个元素之外
   println ("list.init: " + list.init)  // Output: List(a, b)
 
 
@@ -41,16 +46,18 @@ val listWithDuplications = List("a", "a", "b", "c")  // here we have
   // 7. group by
 
   // grouping by unique values:
-
+  //按独特的价值分组：
   println ("listWithDuplications.groupBy: " + listWithDuplications.groupBy( x=>x ) )  // Map(b -> List(b), a -> List(a, a), c -> List(c))
   // which is the same as:
   println ("listWithDuplications.groupBy: " + listWithDuplications.groupBy(identity) )
 
 
   // 8. distinct - list without any duplicate elements.
+  //distinct - 列表中没有任何重复的元素
   println ("listWithDuplications.distinct: " + listWithDuplications.distinct)  // Output: List(a, b, c)
 
   // 9. diff
+  //差集
   {
     val list1 = List(1,2)
     val list2 = List(1,2,3)
@@ -64,6 +71,7 @@ val listWithDuplications = List("a", "a", "b", "c")  // here we have
   }
 
   // 10. ::: - list concantination
+  //连接
   {
 
     val list1 = List(1,2)
@@ -76,6 +84,7 @@ val listWithDuplications = List("a", "a", "b", "c")  // here we have
   }
 
   // 11  "::" - add to the beginning of list
+  // 添加到列表的开头
   {
 
     val list1 = List(1,2)
@@ -91,6 +100,7 @@ val listWithDuplications = List("a", "a", "b", "c")  // here we have
   }
 
   // 12 ":+" - adding to the and of the list
+  //添加到列表中
   {
     val list1 = List(1,2)
     val result = list1 :+ 3               // Note that this operation has a complexity of O(n).
@@ -153,9 +163,9 @@ val listWithDuplications = List("a", "a", "b", "c")  // here we have
     case class Person (name:String, age: Int)
 
     val list = List( Person("Bob", 25), Person("Jon", 31), Person("Peter", 15) )
-
+    //排序
     val result1 = list.sortBy(_.age)
-
+    //自定义排序
     val result2 = list.sortBy {
       case Person(name, age) => (name, age)  // first 'name', then 'age'
     }

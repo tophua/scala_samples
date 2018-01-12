@@ -3,6 +3,7 @@
 package collections.lists
 
 // List comprehension - Haskell comparing to Scala
+//列表理解 - 哈斯克尔比较斯卡拉
 object ListComprehension extends App{
 
   // in haskell:

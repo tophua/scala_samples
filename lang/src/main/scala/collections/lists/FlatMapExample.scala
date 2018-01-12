@@ -7,6 +7,7 @@ object FlatMapExample extends App {
 
   // trying to be simple.
   //试图变得简单
+  //这里是：字符串的序列。 或者：字符序列的序列
   val fruits = List("apple", "banana", "orange")  // here it is: sequence of strings. Or: sequence of sequences of chars
 
   // map

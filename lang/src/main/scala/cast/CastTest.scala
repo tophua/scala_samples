@@ -25,7 +25,7 @@ class Client {
 object CastTest extends App {
 
   // there is some 'interesting' stuff about casting and
-
+  //有一些关于强制类型转换的“有趣”的东西
   val l: List[Int] = List[String]("a").asInstanceOf[List[Int]]
 
   println(l)      // List[Int] = List(a)

@@ -4,8 +4,8 @@ package lists
 
 // Reduce - Simplified version of foldLeft (because we do not need pass seed-value, like we do in fold(seed)(fn)).
 
-// First argument is where result is passed
-// Second argument is always the current item in the collection.
+// First argument is where result is passed 第一个参数是结果通过的地方
+// Second argument is always the current item in the collection. 第二个参数始终是集合中的当前项目
 
 object ReduceExamples extends App {
 
@@ -13,6 +13,12 @@ object ReduceExamples extends App {
 
   // 1.
   val sum1 = theList reduceLeft{ (total, current) => {
+                                      /**
+                                        total:  1 current: 2
+                                        total:  3 current: 3
+                                        total:  6 current: 4
+                                        total:  10 current: 5
+                                        */
                                        println("total:  " + total + " current: " + current)
                                        total + current}
                                    }

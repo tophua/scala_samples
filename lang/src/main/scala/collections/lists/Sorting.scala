@@ -3,7 +3,7 @@ package collections.lists
 // #sort Sorting by name and by position
 
 object Sorting extends App {
-
+  //自定义排序
   val sortByNameAndPosition = new Ordering[Person] {
     def compare(p1: Person, p2: Person) = {
       val comparedByName =p1.name.compare(p2.name)

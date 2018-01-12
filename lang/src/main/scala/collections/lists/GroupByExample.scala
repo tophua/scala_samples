@@ -7,11 +7,11 @@ object GroupByExample extends App {
   type Word = String
 
   type Occurrences = List[(Char, Int)]
-
+  //字发生
   def wordOccurrences(word:Word):Occurrences = {
 
 
-    val groupMap = word groupBy {
+    val groupMap = word.groupBy {
       case ch => ch
     } map {   // Map(e -> e, ! -> !, l -> ll, h -> h, o -> o)
       case (k, chars) => (k, chars.length)   // Map(e -> 1, ! -> 1, l -> 2, h -> 1, o -> 1)
