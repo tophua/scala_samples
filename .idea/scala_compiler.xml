@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <profile name="SBT 1" modules="scala-spark-app,ScalaSamples,Akka,algorithms,scalaDemo,spark" />
+    <profile name="SBT 2" modules="project">
+      <plugins>
+        <plugin path="$USER_HOME$/.ivy2/cache/org.scalamacros/paradise_2.10.6/jars/paradise_2.10.6-2.1.0.jar" />
+      </plugins>
+    </profile>
+    <profile name="SBT 3" modules="Lang">
+      <option name="featureWarnings" value="true" />
+    </profile>
+  </component>
+</project>
