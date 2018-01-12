@@ -12,8 +12,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/algorithms-build.iml" filepath="$PROJECT_DIR$/.idea/modules/algorithms-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/project/.idea/modules/project.iml" filepath="$PROJECT_DIR$/project/.idea/modules/project.iml" />
       <module fileurl="file://$PROJECT_DIR$/project/.idea/modules/project-build.iml" filepath="$PROJECT_DIR$/project/.idea/modules/project-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../Machine-Learning-with-Spark-Second-Edition/Chapter01/scala-spark-app/.idea/modules/scala-spark-app.iml" filepath="$PROJECT_DIR$/../Machine-Learning-with-Spark-Second-Edition/Chapter01/scala-spark-app/.idea/modules/scala-spark-app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../Machine-Learning-with-Spark-Second-Edition/Chapter01/scala-spark-app/.idea/modules/scala-spark-app-build.iml" filepath="$PROJECT_DIR$/../Machine-Learning-with-Spark-Second-Edition/Chapter01/scala-spark-app/.idea/modules/scala-spark-app-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/scalaDemo.iml" filepath="$PROJECT_DIR$/.idea/modules/scalaDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/scalaDemo-build.iml" filepath="$PROJECT_DIR$/.idea/modules/scalaDemo-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/scala_samples.iml" filepath="$PROJECT_DIR$/scala_samples.iml" />

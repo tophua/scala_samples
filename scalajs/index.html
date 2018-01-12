@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>The Scala.js Tutorial</title>
+</head>
+<body onload="webapp.ScalaJsSample1().main()">
+<!-- Include Scala.js compiled code -->
+<script type="text/javascript" src="./target/scala-2.11/scalajs-fastopt.js"></script>
+
+<!-- Include JavaScript dependencies -->
+<script type="text/javascript" src="./target/scala-2.11/scalajs-jsdeps.js"></script>
+
+<link rel="stylesheet" type="text/css" href="screen.css">
+
+<!-- Run tutorial.webapp.TutorialApp -->
+<!--<script type="text/javascript">-->
+    <!--webapp.ScalaJsSample1().main();-->
+<!--</script>-->
+
+<button id="click-me-button">Click</button>
+
+<h3>Got from the service call (from downstream) :</h3>
+<section class="data-list">
+    <ul id="posts"></ul>
+</section>
+
+
+<h3>Scala tags</h3>
+<section>
+    <div id="scalatags">
+
+    </div>
+</section>
+
+</body>
+</html>
