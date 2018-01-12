@@ -5,7 +5,7 @@ import scala.io.BufferedSource
 import java.io.IOException
 
 // #exceptions. #Try
-//
+//异常处理
 object ExceptionSample extends App {
 
  // # 1 syntax: "catch { case ..."
@@ -39,7 +39,7 @@ object ExceptionSample extends App {
 
 
   val result = Try {scala.io.Source.fromFile("some-file.txt", "UTF-8")}.toOption
-  //所以我们正在处理来电方的错误。 让我们打电话来决定如何去与错误
+  //所以我们正在处理来电方的错误。 让我们调用来决定如何处理错误
   result match {                   // so we are handling error on Caller side. Let's caller decide how to go with error
     case None => println (result)
     case s:Some[BufferedSource] => println (s"bufferSource $s is here")

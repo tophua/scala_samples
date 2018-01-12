@@ -7,6 +7,7 @@ package design_patterns.decorator
 object DecoratorSample extends App {
 
   // creating an IceScream with ingredients / decorators
+  //
   val iceCream = new JustIceCream with NuttyDecorator with HoneyDecorator
 
   // sequence of 'with' does matter !
