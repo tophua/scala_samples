@@ -9,7 +9,7 @@ object CaseClassesTest extends App {
   case class A(a:Int, b:Int)
 
   // 1. may omit using "new"
-  //1.可以省略使用“新”
+  //1.可以省略使用“new”
   val a1 = A(1,2)  // same as A.apply(1,2)
 
 
@@ -33,7 +33,7 @@ object CaseClassesTest extends App {
   if (a1 == a2) println ("equal!")  // method '==' uses default built-in 'equals()'
 
   // 5. you we want setters to be defined
-  //5.你们想让定义者定义
+  //5.你们想让定义setters
   //我们需要把'var'（和一般类相同）
   case class B(var a:Int, var b:Int) // we need to put 'var' (same as for general classes)
   val b1 = B(1,2)
@@ -46,7 +46,7 @@ object CaseClassesTest extends App {
   //6.与“模式匹配” - ＃unapply-method #extractor相关
   val b2 = B(1,2)
   var str = b2 match {
-      ////它的工作原因是unapply-method（提取器）方法是默认定义的
+      //它的工作原因是unapply-method(提取器)方法是默认定义的
     case B(1,_) => "yes, first param is '1'"  // it works because of unapply-method (extractor) method is defined by default
   }
   println(str)
