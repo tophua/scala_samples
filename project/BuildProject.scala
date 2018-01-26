@@ -65,6 +65,11 @@ object BuildProject extends Build {
     libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % "test",
     libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.13.5" % "test",
     libraryDependencies += "org.scalamock" %% "scalamock-scalatest-support" % "3.5.0"
+      // https://mvnrepository.com/artifact/joda-time/joda-time
+    //  libraryDependencies += "joda-time" %% "joda-time" % "2.9.7"
+
+  //  libraryDependencies += "com.google.guava" %% "guava" % "18.0"
+
   )
 
   lazy val lang = Project("Lang", file("lang")) settings(

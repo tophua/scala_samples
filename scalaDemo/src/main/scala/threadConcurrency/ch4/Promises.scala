@@ -1,6 +1,5 @@
 package ch4
 import org.learningconcurrency._
-import scala.concurrent.Future
 
 /**
  * 如果说futures是为了一个还没有存在的结果，而当成一种只读占位符的对象类型去创建，
@@ -84,8 +83,6 @@ object PromisesCustomAsync extends App {
 object PromisesAndCallbacks extends App {
   import scala.concurrent._
   import ExecutionContext.Implicits.global
-  import org.apache.commons.io.monitor._
-  import java.io.File
 
   def fileCreated(directory: String): Future[String] = {
     val p = Promise[String]//创建一个Promise对象,然后通过一些计算操作延迟完善该Promise对象的操作
@@ -93,9 +90,9 @@ object PromisesAndCallbacks extends App {
     //FileAlterationMonitor对象会定期扫描文件系统,以查明其中的改变,之后我们需要再创建一个FileAlterationObserver对象
     //该对象代表回调函数,当某个文件在文件系统中被创建时,FileAlterationObserver对象中onFileCreate会调用
     
-    val fileMonitor = new FileAlterationMonitor(1000)
-    val observer = new FileAlterationObserver(directory)
-    val listener = new FileAlterationListenerAdaptor {
+   // val fileMonitor = new FileAlterationMonitor(1000)
+   // val observer = new FileAlterationObserver(directory)
+   /** val listener = new FileAlterationListenerAdaptor {
       //onFileCreate方法会接收目录的名称并返回一个Future对象,该对象中含有新建目录中第一个文件的名称
       override def onFileCreate(file: File) {
         try p.trySuccess(file.getName)//trySuccess分别对应success方法,该方法仅会返回表明该赋值操作是否成功的布尔值
@@ -105,7 +102,7 @@ object PromisesAndCallbacks extends App {
     observer.addListener(listener)
     fileMonitor.addObserver(observer)
     fileMonitor.start()
-
+    **/
     p.future
   }
 /**
@@ -143,9 +140,11 @@ object PromisesAndCustomOperations extends App {
 
 object PromisesAndTimers extends App {
   import java.util._
+
+  import PromisesAndCustomOperations._
+
   import scala.concurrent._
   import ExecutionContext.Implicits.global
-  import PromisesAndCustomOperations._
 
   private val timer = new Timer(true)
 /**

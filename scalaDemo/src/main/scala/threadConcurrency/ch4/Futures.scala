@@ -250,7 +250,7 @@ object FuturesNonFatal extends App {
 object FuturesClumsyCallback extends App {
   import scala.concurrent._
   import ExecutionContext.Implicits.global
-  import org.apache.commons.io.FileUtils._
+  //import org.apache.commons.io.FileUtils._
   import java.io._
   import scala.io.Source
   import scala.collection.convert.decorateAsScala._
@@ -270,7 +270,7 @@ object FuturesClumsyCallback extends App {
    * 异步读取文件的内容,以异步方式扫描项目目录中的所有文件并对它们执行匹配操作
    * 
    * 将格式列表提交给该方法后,该方法可以找到当前目录中符合这些格式的所有文件
-   */
+
   def findFiles(patterns: List[String]): List[String] = {
     val root = new File(".")
     //println(root.getAbsolutePath+"|||||"+root.getCanonicalPath)
@@ -287,7 +287,7 @@ object FuturesClumsyCallback extends App {
       f.getCanonicalPath
     }
     
-  }
+  }   */
   /**
    * 通过Future对象中的函数组合可以在for推导语句中使用Future对象,而且通常比使用回调函数直观.
    * 使用foreach可以避开彻底阻塞的情况
@@ -295,20 +295,20 @@ object FuturesClumsyCallback extends App {
    */
 //val lines = Source.fromFile(".gitignore").getLines
 //  lines.filter(x => !x.startsWith("#") && !x.isEmpty()).foreach { x => println(">>>>>>>>>>"+x) }
-
+  /**
   blacklistFile(".gitignore").foreach {
     case lines =>      
       val files = findFiles(lines)
       files.foreach {  x => println("|||||||||"+x) }
       log(s"matches: ${files.mkString("\n")}")
-  }
+  }**/
   
   /**
    * 可以使用Map方式简化操作,Map方法接收函数f,并返回新的Future对象,
    */
   
-  def blacklistFiles(filename: String):Future[List[String]]=blacklistFile(filename).map(patterns => findFiles(patterns))
-  blacklistFiles(".gitignore").foreach { x =>  log(s"matches: ${x.mkString("\n")}") }
+ // def blacklistFiles(filename: String):Future[List[String]]=blacklistFile(filename).map(patterns => findFiles(patterns))
+ // blacklistFiles(".gitignore").foreach { x =>  log(s"matches: ${x.mkString("\n")}") }
    Thread.sleep(2000)
    //System.exit(0);
 }

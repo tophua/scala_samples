@@ -2,11 +2,6 @@ package scalaDemo
 
 import java.text.SimpleDateFormat
 import java.util.Calendar
-
-
-import org.joda.time.DateTime
-
-import scala.collection.mutable.ArrayBuffer
 /**
   * Created by liush on 17-7-14.
   */
@@ -29,6 +24,7 @@ object TimeUtilsTest {
 
 
   //时间字符串=>日期
+  /**
   def convertDateStr2Date(dateStr: String, pattern: String): DateTime = {
     new DateTime(new SimpleDateFormat(pattern).parse(dateStr))
   }
@@ -59,7 +55,7 @@ object TimeUtilsTest {
   def convertTimeStamp2Sec(timestamp: Long): Long = {
     new DateTime(timestamp).secondOfMinute().getAsString.toLong
   }
-
+**/
 
 
   def addZero(hourOrMin: String): String = {

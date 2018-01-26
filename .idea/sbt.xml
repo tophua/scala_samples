@@ -15,6 +15,22 @@
       </SbtProjectSettings>
       <SbtProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/akka" />
+            <option value="$PROJECT_DIR$/akka/project" />
+            <option value="$PROJECT_DIR$/algorithms" />
+            <option value="$PROJECT_DIR$/algorithms/project" />
+            <option value="$PROJECT_DIR$/lang" />
+            <option value="$PROJECT_DIR$/lang/project" />
+            <option value="$PROJECT_DIR$/project" />
+            <option value="$PROJECT_DIR$/scalaDemo" />
+            <option value="$PROJECT_DIR$/scalaDemo/project" />
+            <option value="$PROJECT_DIR$/spark" />
+            <option value="$PROJECT_DIR$/spark/project" />
+          </set>
+        </option>
         <option name="sbtVersion" value="0.13.11" />
         <option name="useAutoImport" value="true" />
         <option name="useOurOwnAutoImport" value="true" />

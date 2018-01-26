@@ -7,7 +7,7 @@ package lists
 // http://www.scala-lang.org/api/current/index.html#scala.collection.immutable.List
 
 // #list #genaral
-
+//list 一般操作
 object ListMethods extends App {
 
   val list = List("a","b","c")

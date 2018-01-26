@@ -2,20 +2,22 @@ package function_literal
 
 /*
     #function-literal #function-value #anonymous-function
+    函数文字＃函数值＃匿名函数
 */
 object FunctionLiteral extends App {
 
   // Just reminding - this is general function
-
+  //只是提醒 - 这是一般功能
   def foo(a: Int) = a + 1 // it has name 'foo'
 
   // So we can call it like this:
+  //所以我们可以这样称
   val result1 = foo(1)  // each time when you call this function it will instantiate object of Function1
 
 
 
   // And this is #anonymous-function - there is no name of this function - you see, no name = anonymous:
-
+  //这是＃匿名函数 - 没有这个函数的名字 - 你看，没有名字=匿名：
   (a: Int) => a + 1 // so, yes - this is an instance of class Function1
 
 
@@ -24,17 +26,18 @@ object FunctionLiteral extends App {
      // then it is not anonymous anymore.. I know but let's say we don't know its name but only nick name
 
   // Here are we go.. when it comes to referencing #anonymous-function - #Function-Literal appears
-
+  //这里是我们去..当涉及到＃匿名函数 - ＃函数文字出现
   // #Function-Literal is about syntax sugar, is an alternative form how we can define a function:
   val v = (a: Int) => a + 1 // v: Int => Int = <function1>
   def f = (a: Int) => a + 1 // f: Int => Int
 
     // This reference 'v' is - #Function-Value because it represents a value (instance) of Function1 instance
-
+    //此引用“v”是 - ＃函数 - 值，因为它表示Function1实例的值(实例)
     // ( So, the notion of #Function-Literal
         // is somewhere in-between two notions: #Anonymous-Function & #Function-Value )
 
   // This will NOT create instance of Function1 - because it already exists. That's its advantage.
+  //这不会创建Function1的实例 - 因为它已经存在。 这是它的优势。
   val resultV = v(1)
 
   // This will CREATE Function1 instance each time when we call it (same as for normal function)

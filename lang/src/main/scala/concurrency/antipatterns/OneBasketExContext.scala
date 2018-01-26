@@ -4,8 +4,9 @@ import scala.concurrent.duration.Duration
 import scala.concurrent.{ExecutionContext, Await, Future}
 
 // Do not put all on one basket !
+//不要把所有的一篮子！
 // Do not use one execution context for blocking work and for waiting for that work!
-
+//不要使用一个执行上下文来阻塞工作并等待这个工作！
 // Know that foreach, map, flatMap, for and others 
  // need some execution space to wait/work on/in - the execution context is that 'space'
 

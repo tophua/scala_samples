@@ -4,7 +4,7 @@ import scala.annotation.tailrec
 
 // 2. Understanding recursion
 // "Tail Recursion"
-
+//尾递归
 object Factorial2 extends App{
 
   // the problem with Factorial2 was that we have to keep function calls in the Stack

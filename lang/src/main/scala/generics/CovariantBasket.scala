@@ -1,7 +1,7 @@
 package generics
 
 // #lower-type-bounds
-
+//
 class CovariantBasket[+T] { // support Covariance - f.e.: consider Basket[Fruit] a superType of Basket[Apple]
 
 //def add(x: T): T = {x} // will not compile when +T / covariance is on

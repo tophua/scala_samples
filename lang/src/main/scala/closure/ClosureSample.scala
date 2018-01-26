@@ -1,7 +1,7 @@
 package closure
 
 //# Closure
-
+//闭包
 object ClosureSample extends App {
 
 // Closure - is all about encapsulation

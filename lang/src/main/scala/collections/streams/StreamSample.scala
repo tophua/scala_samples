@@ -57,20 +57,21 @@ object StreamSample extends App {
 //  The accessing the second element will run the function.
     //访问第二个元素将运行该功能。
 // Notice it is not evaluated until request !
-
+//请注意，它不被评估，直到请求!
     val stream2 = cons (0, {
                               println("getting second element")
                               cons(1, Stream.empty)
                            }
                         )
-
+    //stream2：Stream（0，？） - NO“获得第二个元素”出现！
     println ("stream2: " + stream2) // stream2: Stream(0, ?) -- NO "getting second element" appearing !
-
+    //没有“获得第二元素”出现！
     stream2(0)  // NO "getting second element" appeared !
+    //这将导致“获得第二元素”出现
     stream2(1)  // this will lead to "getting second element" appearing
 
     // Function is only evaluated once:
-
+    //函数只评估一次：
     stream2(1)  // NO "getting second element" appeared !
 
 
@@ -78,6 +79,7 @@ object StreamSample extends App {
   }
 
   // #4  - force method, + Stream.from method
+  //#4  -强制方法，+ Stream.from方法
   {
 
     // Create an infinite stream starting at `start` and incrementing by `1`.
@@ -89,6 +91,7 @@ object StreamSample extends App {
   println ("\n#3 \n")
 
   // #5 "#::" method  - same as "Stream.cons", same as "::" in List
+  //方法 - 与“Stream.cons”相同，与List中的“::”相同
   {
     val stream5 = 0 #:: { println("hi"); 1 } #:: Stream.empty
 

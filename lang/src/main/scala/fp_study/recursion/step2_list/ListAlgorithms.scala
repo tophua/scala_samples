@@ -2,8 +2,9 @@ package fp_study.recursion.step2_listl
 
 /**
  * There are simple examples of recursive algorithms which are related to List.
- *
+ * 有一些与List有关的递归算法的简单例子
  * Examples comes with step by step explanations to make it clear to understand applied recursion
+  * 例子来一步一步解释清楚了解应用递归
  */
 
 object ListAlgorithms extends App {
@@ -13,7 +14,7 @@ object ListAlgorithms extends App {
     val list = List(1,2,3)
 
     // So, what we need is just skip very last element
-
+    //所以,我们需要的只是跳过最后一个元素
     def init[T](xs: List[T]) : List[T] = xs match {
       case List() => throw new Error("empty list")
       case List(x) => List() // empty list - this makes it skip very last element of tail that is passing

@@ -1,7 +1,5 @@
 package scalaDemo
 
-import org.apache.spark.deploy.SparkSubmit
-
 /**
   * Created by liush on 17-7-19.
   */

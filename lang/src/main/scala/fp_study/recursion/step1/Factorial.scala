@@ -3,7 +3,7 @@ package fp_study.recursion.step1
 // 1. Understanding recursion
 
 // "Head recursion"
-
+//头递归
 object Factorial extends App {
 
   def factorial(i:Int) : BigInt = {      // let's take a look if on the call-flow if i = 5

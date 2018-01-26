@@ -2,7 +2,7 @@ package fp_deep
 // #monoid
 
 /*
-- In math, Monoid is a category with one object.
+- In math, Monoid is a category with one object. 在数学中，Monoid是一个对象的范畴。
 - In abstract algebra, a branch of mathematics, a Monoid is an _algebraic structure_ with
 a single associative binary operation and an identity element.
 */

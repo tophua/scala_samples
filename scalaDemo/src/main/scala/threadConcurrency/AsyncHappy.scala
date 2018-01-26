@@ -57,20 +57,7 @@ object AsyncHappy extends App {
     /**
       * onSuccess() 调用是嵌套式的，所以它们将按顺序执行（即使 future 未完全按顺序完成）,代码比较容易理解，但很冗长
       */
-    task1(1).onSuccess(v => v match {
-      case v1 => {
-        val a = task2(v1)
-        val b = task3(v1)
-        a.onSuccess(v => v match {
-          case v2 =>
-            b.onSuccess(v => v match {
-              case v3 => task4(v2 + v3).onSuccess(v4 => v4 match {
-                case x => result.success(x)
-              })
-            })
-        })
-      }
-    })
+
     result.future
   }
 /**
