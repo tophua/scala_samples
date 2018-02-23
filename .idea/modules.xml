@@ -4,18 +4,14 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Akka.iml" filepath="$PROJECT_DIR$/.idea/modules/Akka.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Akka-build.iml" filepath="$PROJECT_DIR$/.idea/modules/Akka-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Lang.iml" filepath="$PROJECT_DIR$/.idea/modules/Lang.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Lang-build.iml" filepath="$PROJECT_DIR$/.idea/modules/Lang-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ScalaSamples.iml" filepath="$PROJECT_DIR$/.idea/modules/ScalaSamples.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ScalaSamples-build.iml" filepath="$PROJECT_DIR$/.idea/modules/ScalaSamples-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/algorithms.iml" filepath="$PROJECT_DIR$/.idea/modules/algorithms.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/algorithms-build.iml" filepath="$PROJECT_DIR$/.idea/modules/algorithms-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/project/.idea/modules/project.iml" filepath="$PROJECT_DIR$/project/.idea/modules/project.iml" />
-      <module fileurl="file://$PROJECT_DIR$/project/.idea/modules/project-build.iml" filepath="$PROJECT_DIR$/project/.idea/modules/project-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo.iml" filepath="$PROJECT_DIR$/.idea/modules/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo-build.iml" filepath="$PROJECT_DIR$/.idea/modules/demo-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/scalaDemo.iml" filepath="$PROJECT_DIR$/.idea/modules/scalaDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/scalaDemo-build.iml" filepath="$PROJECT_DIR$/.idea/modules/scalaDemo-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/scala_samples.iml" filepath="$PROJECT_DIR$/scala_samples.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spark-build.iml" filepath="$PROJECT_DIR$/.idea/modules/spark-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scalaSamples.iml" filepath="$PROJECT_DIR$/.idea/modules/scalaSamples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scalaSamples-build.iml" filepath="$PROJECT_DIR$/.idea/modules/scalaSamples-build.iml" />
     </modules>
   </component>
 </project>

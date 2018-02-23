@@ -72,7 +72,7 @@ object BuildProject extends Build {
 
   )
 
-  lazy val lang = Project("Lang", file("lang")) settings(
+  lazy val lang = Project(id="demo", base =file("lang")) settings(
     version       := "0.5",
     scalaVersion  := Versions.scala,
 
@@ -104,7 +104,7 @@ object BuildProject extends Build {
     libraryDependencies ++= akkaDependencies
    )
 
-  lazy val spark = Project(id = "spark", base = file("spark")) settings(
+ /* lazy val spark = Project(id = "spark", base = file("spark")) settings(
     version       := "0.1",
     scalaVersion  := Versions.scala,
 
@@ -112,7 +112,7 @@ object BuildProject extends Build {
 
 //    libraryDependencies ++= coreDependencies,
     libraryDependencies ++= sparkDependencies
-  )
+  )*/
 
 
   //lazy val scalaJS = Project(id = "ScalaJS", base = file("scalajs")).enablePlugins(ScalaJSPlugin).settings(
@@ -147,8 +147,8 @@ object BuildProject extends Build {
    //  scalaJSUseRhino in Global := false //will use node.js to build the thing
   //  )
 
-  lazy val scalaSamples = Project(id = "ScalaSamples", base = file(".")).settings(
-    name:="ScalaSamples",
+  lazy val scalaSamples = Project(id = "scalaSamples", base = file(".")).settings(
+    name:="scalaSamples",
     version := Versions.binding
     //scalaJS,
   ).aggregate(lang, akka,  algorithms,scalaDemo)
