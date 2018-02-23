@@ -8,6 +8,11 @@ package scalaDemo
   object optionDemo extends App {
     println("basics")
     val x: Option[String] = None  //创建未初始化的字符串变量
+  //nonEmpty,isDefined 如果可选值是Some的实例返回true,否则返回 false
+  //isEmpty 检测可选类型值是否为None,是的话返回 true,否则返回 false
+  //orNull 如果选项包含有值返回选项值,否则返回 null。
+  //orElse如果一个Option是None,orElse方法会返回传名参数的值，否则，就直接返回这个 Option。
+  println("nonEmpty:"+x.nonEmpty+"==isEmpty=="+x.isEmpty+"====="+x.isDefined+"==orNull=="+x.orNull)
     //println(x.get)//访问未初始化的变量导致抛出异常
     println(x.getOrElse("default"))//使用默认值的方式访问
     val y = Some("now initialized")//用字符串初始化

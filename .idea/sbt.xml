@@ -3,17 +3,6 @@
   <component name="ScalaSbtSettings">
     <option name="linkedExternalProjectsSettings">
       <SbtProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/../Machine-Learning-with-Spark-Second-Edition/Chapter01/scala-spark-app" />
-        <option name="jdk" value="1.8" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/../Machine-Learning-with-Spark-Second-Edition/Chapter01/scala-spark-app" />
-            <option value="$PROJECT_DIR$/../Machine-Learning-with-Spark-Second-Edition/Chapter01/scala-spark-app/project" />
-          </set>
-        </option>
-        <option name="sbtVersion" value="0.13.16" />
-      </SbtProjectSettings>
-      <SbtProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>

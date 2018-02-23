@@ -4,20 +4,20 @@
     <output url="file://$MODULE_DIR$/../../lang/target/scala-2.11/classes" />
     <output-test url="file://$MODULE_DIR$/../../lang/target/scala-2.11/test-classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../lang">
+    <content url="file://$MODULE_DIR$/../../samples">
       <sourceFolder url="file://$MODULE_DIR$/../../lang/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../lang/src/main/scala" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../samples/src/main/scala" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../lang/src/main/scala-2.11" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../lang/src/test/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../lang/src/test/scala" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../samples/src/test/scala" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../lang/src/test/scala-2.11" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../lang/target/scala-2.11/src_managed/main" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../lang/target/scala-2.11/src_managed/test" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../lang/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../samples/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../lang/target/scala-2.11/resource_managed/main" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../lang/src/test/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../lang/target/scala-2.11/resource_managed/test" type="java-test-resource" />
-      <excludeFolder url="file://$MODULE_DIR$/../../lang/target" />
+      <excludeFolder url="file://$MODULE_DIR$/../../samples/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

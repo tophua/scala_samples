@@ -3,7 +3,7 @@ import java.io.{File, PrintWriter}
 /**
   * create by liush on 2018-1-26
   */
-object withPrintWriter  extends App{
+object TemplateMethod  extends App{
   //比如下面,每次打开文件,操作,关闭文件,固定模式,所以实现withPrintWriter,
   //每次传入不同的op就可以进行不同的操作,而不用考虑文件开关
   //如果是oo实现,就需要传入基类对象,利用多态实现,明显使用函数更轻量级一些
