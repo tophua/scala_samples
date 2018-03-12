@@ -4,7 +4,7 @@ package collections.lists
 // related: #reduce (see: ReduceExample) #template-method-pattern #strategy-pattern #decorator-pattern
 
 // In nutshell: Fold is sophisticated version of 'reduce'
-
+//简而言之：折叠是“reduce”的复杂版本
 object FoldExample extends App {
 
   println("#1")
@@ -15,7 +15,7 @@ object FoldExample extends App {
     val result1 = List(1,2,3).foldLeft(0)(_ + _)
 
     // empty list will work, because initial value is set to 0 ('reduceLeft' would not work [#reduce related] )
-    //空列表将工作，因为初始值设置为0
+    //空列表将工作,因为初始值设置为0
     val result2 = List[Int]().foldLeft(0)(_ + _)
 
     println (result1) // 6
@@ -30,6 +30,7 @@ object FoldExample extends App {
       list.foldRight(List[Int]()) { (right, result) =>
         right :: result
       }
+    //List(1, 2, 3)
     println ("traversing by foldRight: " + list)
   }
 
@@ -66,7 +67,7 @@ object FoldExample extends App {
     }
 
   // sequence of operations to be applied is important fo us. Like it is in #decorator-pattern
-
+  //要应用的操作顺序对我们很重要,就像它在＃decorator-pattern中一样
   val result = applyTransformations("hello", Seq( upperCaseOP, addBarOP))
 
   println ("result: " + result) // HELLObar

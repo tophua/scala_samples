@@ -13,15 +13,16 @@ object ListMethods extends App {
   val list = List("a","b","c")
 
   // 1. take
-  //取N个元素(N不是索引！),输出：List（a）
+  //取N个元素(N不是索引！),输出： List(a)
   println("take(1): " + list.take(1) ) // Takes N elements (N is not index!). Output:  List(a)
 
   // 2. drop
-  //删除前N个元素。 输出：列表（c）
+  //删除前N个元素, 输出：List(c)
   println ("drop(2): " + list.drop(2) ) // Drops first N elements. Output: List(c)
 
-  // 3. reverse
-  println ("list.reverse: " + list.reverse) // Output: List(c)
+  // 3. reverse 逆转
+  //list.reverse: List(c, b, a)
+  println ("list.reverse: " + list.reverse) // Output: list.reverse: List(c, b, a)
 
   // 4. head
   println ("list.head: " + list.head) // Output:a
@@ -34,9 +35,8 @@ object ListMethods extends App {
   //除去最后一个元素之外
   println ("list.init: " + list.init)  // Output: List(a, b)
 
-
-
   // 6. sum
+  //管用,因为它不知道如何总结Numeric [Strings]
   //println ("list.sum: " + list.sum)  // will not work. Because it does not know how to sum Numeric[Strings]
   // TODO: add implicit param to make it go
 
@@ -44,14 +44,13 @@ object ListMethods extends App {
 val listWithDuplications = List("a", "a", "b", "c")  // here we have
 
   // 7. group by
-
   // grouping by unique values:
   //按独特的价值分组：
+  //listWithDuplications.groupBy: Map(b -> List(b), a -> List(a, a), c -> List(c))
   println ("listWithDuplications.groupBy: " + listWithDuplications.groupBy( x=>x ) )  // Map(b -> List(b), a -> List(a, a), c -> List(c))
   // which is the same as:
+  //listWithDuplications.groupBy: Map(b -> List(b), a -> List(a, a), c -> List(c))
   println ("listWithDuplications.groupBy: " + listWithDuplications.groupBy(identity) )
-
-
   // 8. distinct - list without any duplicate elements.
   //distinct - 列表中没有任何重复的元素
   println ("listWithDuplications.distinct: " + listWithDuplications.distinct)  // Output: List(a, b, c)
@@ -94,19 +93,22 @@ val listWithDuplications = List("a", "a", "b", "c")  // here we have
     // but this will work:
 
     val result = 3 :: list1
-
+    val p=7 +: list1
+    println("list1 +: 7:"+p) //list1 +: 7:List(7, 1, 2)
     println("list1 :: 3: " + result)  // Output: List(3, 1, 2)
 
   }
 
   // 12 ":+" - adding to the and of the list
-  //添加到列表中
+  //在列表的尾部添加一个元素
   {
     val list1 = List(1,2)
     val result = list1 :+ 3               // Note that this operation has a complexity of O(n).
                                           // If you need this operation frequently, or for long lists,
+                                          //如果您经常需要此操作,或者需要长列表，
+                                          //考虑使用另一种数据类型(例如ListBuffer)
                                            // consider using another data type (e.g. a ListBuffer).
-
+    //list1 :+ 3: List(1, 2, 3)
     println ("list1 :+ 3: " + result)
 
   }

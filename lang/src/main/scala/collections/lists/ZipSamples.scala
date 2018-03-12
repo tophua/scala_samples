@@ -14,10 +14,12 @@ object ZipSamples extends App {
   println("zipped2: " + zipped2)
 
   // #2 with Index
+
   val zippedIWithIndex = list.zipWithIndex // List((a,0), (b,1), (c,2))
 
   // same as:   list zip List(0,1,2,3,4)
-
+  //zipWithIndex 将列表元素与其索引进行拉链操作,组成一个pair
+  //zippedIWithIndex:List((a,0), (b,1), (c,2))
   println ("zippedIWithIndex:" + zippedIWithIndex)
 
 }
