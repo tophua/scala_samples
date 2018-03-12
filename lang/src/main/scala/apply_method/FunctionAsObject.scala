@@ -24,6 +24,6 @@ object FunctionAsObject extends App {
   println(v2)  // 4
 
   // That means that in Scala everything tends to be a function (apply methods helps to get this feeling), but all functions are objects.
-  //这意味着在一切都倾向于一个函数（应用方法有助于得到这种感觉），但所有的功能都是对象
+  //这意味着在一切都倾向于一个函数(应用方法有助于得到这种感觉),但所有的功能都是对象
 
 }

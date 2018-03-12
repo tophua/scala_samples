@@ -32,6 +32,6 @@ object FactoryApplyMethod extends App {
   // why the difference ?
   //为什么区别？
   //  by using A(1) we do not use method "new" to create an object (it make code more precise/short). And an object looks like a function call
-  //通过使用A（1）我们不使用方法“new”来创建对象（它使得代码更加精确/短）,而一个对象看起来像一个函数调用
+  //通过使用A(1)我们不使用方法“new”来创建对象(它使得代码更加精确/短),而一个对象看起来像一个函数调用
 
 }
