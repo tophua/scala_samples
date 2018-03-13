@@ -8,7 +8,7 @@ package fp_deep
 import scala.language.higherKinds  // if not set/imported - the warning about "higher-kinded type' will be generated (see this paper: http://adriaanm.github.io/files/higher.pdf)
 
 object FunctorDemo extends App {
-  //使用一个类型参数的类型构造函数。 （“更高类型”）
+  //使用一个类型参数的类型构造函数,(“更高类型”)
   trait Functor[T[_]] {  // T[_] - #type-constructor that takes one type parameter. ("higher-kinded type" )
     //从A => B取得函数并返回包装T [A] => T [B]
     def fmap[A, B](f: A => B): T[A] => T[B] // takes function from A=>B and returns wrapped T[A] => T[B]
@@ -27,8 +27,8 @@ object FunctorDemo extends App {
 
   // let's define/implement two Functors then
   //那么我们来定义/实现两个Functor
-  val listFunctor = new Functor[List] {      // List - type constructor 列表类型的构造函数
-    //[A]，[B] - 该类型构造函数的类型参数
+  val listFunctor = new Functor[List] { // List - type constructor 列表类型的构造函数
+    //[A],[B] - 该类型构造函数的类型参数
     def fmap[A, B](f: A => B): List[A] => List[B] = {   // [A], [B] - type parameters for that type constructor
       case Nil     => Nil
       case a :: as => f(a) :: fmap(f)(as)   // List[B]

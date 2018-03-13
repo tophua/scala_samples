@@ -2,15 +2,18 @@ package fp_deep
 // #monoid
 
 /*
-- In math, Monoid is a category with one object. 在数学中，Monoid是一个对象的范畴。
+- In math, Monoid is a category with one object. 在数学中,Monoid是一个对象的范畴。
 - In abstract algebra, a branch of mathematics, a Monoid is an _algebraic structure_ with
 a single associative binary operation and an identity element.
+  在抽象代数中,数学的一个分支,Monoid是一个_algebraic结构单个关联二元操作和一个标识元素
 */
 
 trait Monoid[T] {
   def mappend(m1: T, m2: T): T
 
   // here is a single binary operation
+  //这里是一个单一的二进制操作
+  //这是身份元素
   val mzero: T // this is identity element
 }
 
@@ -54,8 +57,9 @@ object MonoidDemo extends App {
 
 
   // or we can avoid using 'implicit' in arguments, but use 'implicitly' inside the f body
-
+  //或者我们可以避免在参数中使用'隐式',但在f体内使用'隐式'
   def plus[A: Monoid](a: A, b: A): A =
+    //我会称之为'隐式''注入'
     implicitly[Monoid[A]].mappend(a, b) // I would call 'implicitly' 'inject'
 
   val plusInt = plus(1, 2)

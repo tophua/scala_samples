@@ -16,7 +16,7 @@ object Factorial extends App {
   }
 
   // note: "i * " - this is "head" of recursion call
-
+  //注意：“i*” - 这是递归调用的“head”
   println ( factorial(1) )
   println ( factorial(2) )
   println ( factorial(3) )
@@ -25,12 +25,13 @@ object Factorial extends App {
 
   // The important thing to understand is:  that function calls are saving into the Stack
   // and it all these calls are starting evaluating it gets real value.
+  //要理解的重要事情是：函数调用正在保存到堆栈中,并且所有这些调用都开始评估它获得实际价值
   // Then it gets back to from the very end stack call to the beginning, evaluating one after another.
   // (In our case real value is = 1).
 
 
   // as you understand, sometimes stack might be overflowed, let's try this:
-
+  //如你所知，有时栈可能会溢出，让我们试试这个：
   println( "factorial(1000): " + factorial(1000) ) // ve...ee...ery big Int
 
   // but if uncomment this:

@@ -17,7 +17,11 @@ object ListAlgorithms extends App {
     //所以,我们需要的只是跳过最后一个元素
     def init[T](xs: List[T]) : List[T] = xs match {
       case List() => throw new Error("empty list")
+        //空列表 - 这使得它跳过正在传递的尾部的最后一个元素
       case List(x) => List() // empty list - this makes it skip very last element of tail that is passing
+        //head 返回集合第一个元素,
+        //tail 返回一个集合,包含除了第一元素之外的其他元素
+        //init出去最后一个元素之外的所有的元素
       case head :: tail => head :: init(tail)             // 1.  1 :: tail(2, 3) - 1 :: (2, Nil)
                                                           // 2.  2 :: tail(3)  -> 2 :: (Nil)
                                                           // 3.  3 -> Nil
