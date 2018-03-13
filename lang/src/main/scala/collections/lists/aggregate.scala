@@ -28,6 +28,7 @@ object aggregate extends App {
 
   // in comparison to fold
   // 与折叠相比
+  //foldleft是从左开始计算,然后往右遍历,
   val result0 = ss.foldLeft( /*seed=*/0 ) ( compFn)           // 10
   //聚合
   val result1 = ss.aggregate( /*seed=*/0 ) ( compFn, combFn1)  // 10 - same !

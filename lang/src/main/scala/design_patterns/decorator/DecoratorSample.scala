@@ -3,16 +3,16 @@ package design_patterns.decorator
 // inspired by: http://javapapers.com/design-patterns/decorator-pattern/
 
 // #decorator-pattern #traits
-
+//装饰样品
 object DecoratorSample extends App {
 
   // creating an IceScream with ingredients / decorators
-  //
+  //创建IceScream 用ingredients / decorators with从右向左运行
   val iceCream = new JustIceCream with NuttyDecorator with HoneyDecorator
 
   // sequence of 'with' does matter !
-
-  println (iceCream makeIcecream) // Base IceCream + crunchy nuts + sweet honey
+  //
+  println (iceCream.makeIcecream) // Base IceCream + crunchy nuts + sweet honey
 
 }
 
@@ -33,7 +33,7 @@ class JustIceCream extends IceCream {
 //  - and no need to care about delegation calls from out IcecreamDecorator.makeIcecream() method
 
 // making use of 'traits' helps us avoid boilerplate code creation
-
+//利用'特质'帮助我们避免了样板代码的创建
 trait HoneyDecorator extends JustIceCream {
   abstract override def makeIcecream(): String = {
     super.makeIcecream + " + sweet honey"

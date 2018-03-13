@@ -14,6 +14,7 @@ object ExceptionSample extends App {
 
     def loadFile(filename: String, encoding: String = "utf-8"): Option[String] = {
       try {
+
         val source = scala.io.Source.fromFile(filename, encoding)
         val contents = source.mkString
         source.close()
@@ -34,14 +35,13 @@ object ExceptionSample extends App {
 }
 
  // #2 scala.util.Tty   -- check this ouy it is much easier, seems
-  //scala.util.Tty - 检查这个ouy这是很容易，似乎
+  //scala.util.Tty - 似乎,检查这个ouy这是很容易
 {
 
-
   val result = Try {scala.io.Source.fromFile("some-file.txt", "UTF-8")}.toOption
-  //所以我们正在处理来电方的错误。 让我们调用来决定如何处理错误
+  //所以我们正在处理调用的错误情况,让我们调用来决定如何处理错误
   result match {                   // so we are handling error on Caller side. Let's caller decide how to go with error
-    case None => println (result)
+    case None => println (result) //None
     case s:Some[BufferedSource] => println (s"bufferSource $s is here")
   }
 }

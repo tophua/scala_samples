@@ -2,9 +2,9 @@ package extractors
 
 /*
  * In nutshell: If apply() method usually creates an object from/by inputs parts, as factory method,
- * 简而言之：如果apply（）方法通常通过输入部分创建一个对象，如工厂方法，
+ * 简而言之：如果apply()方法通常通过输入部分创建一个对象,如工厂方法,
  * Then unapply method - extracts those parts from the object in favour of / (To be used in) pattern-matching
- * 然后，unapply方法 - 从对象中提取那些有利于/（将用于）模式匹配的部分
+ * 然后,unapply方法 - 从对象中提取那些有利于/(将用于)模式匹配的部分
  * that's why it is called "Extractor"
  *
  * #extractor, unapply-method
@@ -14,7 +14,7 @@ package extractors
 object ExtractorsTest extends App {
 
   // let's say we have class email
-  //比方说，我们有class的电子邮件
+  //比方说,我们有class的电子邮件
   class Email {
     var name:String = ""
     var host:String = ""
@@ -30,7 +30,6 @@ object ExtractorsTest extends App {
       val ar = str.split("@")  // converts string to the object
       email.name = ar(0)
       email.host = ar(1)
-
       email
     }
 
@@ -43,10 +42,7 @@ object ExtractorsTest extends App {
 
   // usage:
   val email = Email("bob@gmail.com")
-
-
   // 1. #pattern-matching related 模式匹配相关
-
   email match {
     case Email(name, domain) => println("name: " + name, "domain:" + domain)  // (name: bob,domain:gmail.com)
     case _ => println("no")
@@ -54,39 +50,36 @@ object ExtractorsTest extends App {
 
   // when we do email 'match ..' it calls 'Email.unapply(email)' and returns 'Some("bob","gmail")'  !
   //我们做电子邮件“匹配..”时，它会调用“Email.unapply（email）”并返回“Some（”bob“，”gmail“）！
-
-
   // 2. Let's make extractor to help us ever more, filtering the expecting result by pattern-matching. (#pattern-matching related)
-  //2. 让我们提取器来帮助我们更多，通过模式匹配过滤期望的结果。
+  //2. 让我们提取器来帮助我们更多,通过模式匹配过滤期望的结果。
   object Domain {
-
-    // extractor !
+    // extractor ! 提取
     def unapply(host: String): Option[(String)] = {
-
+      println("====="+host)
+      //=====gmail.com
        val domains = host.split("\\.")  // splitting by dot ( "." )
       //现在我们只关心第1个域来简化事情
        if (domains.length > 1) return Some(domains(1))  // for now we care only about 1-th domain to keep things simple
-
        None
-
     }
-  } // as you can see to keep things simple we even do not create apply() method, and there is no class Domain, only object is used
-
+  }
+  // as you can see to keep things simple we even do not create apply() method, and there is no class Domain, only object is used
+  //正如你所看到的,为了简单起见,我们甚至不创建apply()方法,并且没有类Domain,只使用对象
   email match {
-
-    // this part is interesting 这部分很有趣  Domain.unapply（host）！
-    case Email(name, host @ Domain("com")) => println ("yes, this is .com domain")  // Domain.unapply(host) !
-
+      //this part is interesting 这部分很有趣Domain.unapply(host)！
+      //yes,this is .com domain
+      //把host绑定到Domain
+      //变量绑定,采用变量名,与@符号,如果后面的模式匹配成功,则将整体匹配结果作为返回值
+      //gmail.com
+    case Email(name, host @ Domain(_)) => println ("yes, this is .com domain")  // Domain.unapply(host) !
     // what do you think "host" is here ? it has the following value: "gmail.com"
-    // 你觉得“host”在这里？ 它有以下值：“gmail.com”
+    // 你觉得“host”在这里?它有以下值：“gmail.com”
     // what this about? we binds (@ means 'to bind to') host to Domain.  (#variable-binding related)
-    // 这是关于什么？ 我们绑定（@意味着'绑定'）host到Domain。 （＃变量绑定相关）
+    // 这是关于什么? 我们绑定(@意味着'绑定')host到Domain,(＃变量绑定相关)
     // and what does it mean to bind ?? It means to pass it to extractor (to unapply method) - Domain.unapply(host)
-    // 这是什么意思绑定？ 它意味着把它传递给提取器（不适用的方法） - Domain.unapply（host）
+    // 这是什么意思绑定?它意味着把它传递给提取器(不适用的方法) - Domain.unapply（host）
     // there is no magic, this just a syntax, we should remember: if inside "case" - that's all about unapply()
-
-      //没有魔法，这只是一个语法，我们应该记住：如果里面的“case” - 这是关于unapply（）
-
+      //没有魔法,这只是一个语法,我们应该记住:如果里面的“case” - 这是关于unapply()
     case _ => println("nothing has been matched")
   }
 

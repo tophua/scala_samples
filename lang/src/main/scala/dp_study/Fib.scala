@@ -28,13 +28,14 @@ object Fib extends App {
   def fib1(n:Int) : Int = {
     print (" " + n + " ")
     if (n <= 1) n
+      //将每次重新计算..这很糟糕
     else fib1(n-1) + fib1(n-2) // fib(..) will be recalculating each time.. That's bad.
   }
 
   println ( " ;result: " + fib1(5) ) //  5  4  3  2  1  0  1  2  1  0  3  2  1  0  1  ;result: 5
 
 // #2
-
+  //全局可变状态 - 不好,但它显示了这个想法
   val m = mutable.Map[Int, Int](0 -> 0, 1->1) // global mutable state - not good. but it shows the idea
 
   // using #memoization
@@ -44,6 +45,7 @@ object Fib extends App {
 
       if (m.get(n) == None) {
         // introducing #memoizattion
+        //重用先前存储的值
         m += (n -> ( fib2(n-1) + fib2(n-2) ) )  // reusing previously stored values
       }
       m.get(n) get
@@ -55,7 +57,7 @@ object Fib extends App {
 // #3
 
   // A bit improved version. Scala style. #automatic-memoization. Hiding mutable scope into the function.
-
+  //有点改进版本,斯卡拉风格,＃自动记忆化,隐藏可变范围到函数中
   //#automatic-memoization
 
 

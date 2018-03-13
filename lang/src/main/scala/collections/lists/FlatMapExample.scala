@@ -76,7 +76,7 @@ object FlatMapExample extends App {
 
     // flatMap:
     {
-
+      //矩阵的迭代
       val elements:Array[Int] = matrix flatMap( row => for (elements <-row) yield elements )
 
       println ("\nelements2: ")
