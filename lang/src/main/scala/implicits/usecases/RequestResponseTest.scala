@@ -15,7 +15,7 @@ object RequestResponseTest extends App {
   trait Action  // there are two auth Action - Ok and Not Ok
   case class OkAction(request:Result) extends Action
   case class UnauthorizedAction(content:Result) extends Action
-
+  //我们简单的数据库
   var userDB = List(User("user1"), User("user2"), User("user3") ) // our simple database
 
 
@@ -23,7 +23,7 @@ object RequestResponseTest extends App {
   //检查授权并将请求包装到Action中
   def withAuth(f: User => (Request => Result) ): Action = {
     println("withAuth in play...")
-
+  //期望用户和请求在隐式范围内定义
     val result:Result = f(implicitly[User])(implicitly[Request]) // expecting User and Request were defined in implicit scope
 
     def isAuthorized(user:User): Boolean = {
@@ -59,6 +59,7 @@ object RequestResponseTest extends App {
          So it tries to get the Result by searching for the current user.
          If user has been found then it makes sense to continue with Authorisation (withAuth)
       */
+      //传递带有用户,请求和结果的匿名函数(其中结果基于用户数据库中的用户存在)
       user => request => { // passing anonymous function with user, request, and result (where result is based on user existence in the user db )
         val userOption = findInDb(User("user1"))          // find the user in users db
         val result:Result = userOption match {      // check if user exists

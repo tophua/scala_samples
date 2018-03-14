@@ -9,8 +9,9 @@ import com.fasterxml.jackson.module.scala.DefaultScalaModule
  * jackson-module-scala
  *
  * The Scala Module supports serialization and limited deserialization of:
+  * Scala模块支持序列化和有限的反序列化：
  * Scala Case Classes, Sequences, Maps, Tuples, Options, and Enumerations.
- *
+ *Scala Case Classes类,序列,Map,元组,选项和枚举。
  * + some info: https://github.com/FasterXML/jackson-module-scala/wiki/FAQ
  */
 object ClassToJson extends App {

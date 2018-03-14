@@ -32,9 +32,9 @@ object ImplicitObjectTest extends App {
   }
 
   // MAIN - a boss are passing some work to do, without specifying a worker
-
+  //主要 - 老板正在通过一些工作来做,而没有指定一名工人
     Boss.passWorkToDo(work = "take the first letter from this string")  // prints "t"
-
+    //打印“1”，正如我们在这里看到的,我们不知道哪个工作人员会做这项工作
     Boss.passWorkToDo(work = 123456789) // print "1", as we can see here we don't know which worker will do the work
 
     //Boss.makeWorkedDo(work = new Object) // if there is no worker, will fail on compilation

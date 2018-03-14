@@ -5,6 +5,7 @@ package implicits
 /**
  * " Nasty gotcha.
  *   Here's the general implicit search behaviour in question: "
+  *  以下是有问题的一般隐式搜索行为:
 */
 
 class A

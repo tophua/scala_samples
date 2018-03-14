@@ -1,11 +1,12 @@
 package higher_order_functions
 
 // Higher Order Function example.
-
+//高阶函数示例
 object HigherOrderFunctionTest extends App {
 
   // #1
   // taking a function without trying to pass any param to it
+  //在不尝试传递任何参数的情况下接受一个函数
   def takeFunction(f: (Int=>Int) ) = {
      println(f)       // print: <function1>, - not evaluated yet
      println( f(1) )  // print: 1 - evaluation take place here !
@@ -13,6 +14,7 @@ object HigherOrderFunctionTest extends App {
 
   // #2
   // taking a function with one single param 'p'
+  //采用一个参数'p'的函数
   def takeFunction2(f: (Int=>Int), p:Int ) = {
     println(f(p))   // evaluation takes place here !
   }
