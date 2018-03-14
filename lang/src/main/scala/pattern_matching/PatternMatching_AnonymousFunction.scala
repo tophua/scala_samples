@@ -25,7 +25,7 @@ object PatternMatching_AnonymousFunction extends App {
   })
 
   // so, foreach expects a function
-  //所以，foreach期待一个函数
+  //所以,foreach期待一个函数
   // But what kind of function we have provided with " case(k,v) => println("k="+k+";v="+v) "  ?
   //但是，我们提供了什么样的函数“case（k，v）=> println（”k =“+ k +”; v =“+ v）”？
   // It is:

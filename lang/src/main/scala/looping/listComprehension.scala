@@ -11,7 +11,7 @@ package looping
    result = contact [[1],[3,4,5],[6]]               -- [1,2,3,4,5]
 
 */
-
+//列表理解
 object ListComprehension extends App {
 
   def contact(xss: List[List[Int]]) : List[Int] = for ( xs <- xss ; x <- xs ) yield x

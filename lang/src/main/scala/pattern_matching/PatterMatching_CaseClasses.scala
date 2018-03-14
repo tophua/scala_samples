@@ -3,6 +3,7 @@ package pattern_matching
 /*
  * #pattern-matching #case-classes
  * related: #unapply-method #extractor #companion-object
+ * 类的匹配模式
 */
 object PatterMatching_CaseClasses extends App {
 
@@ -25,7 +26,7 @@ object PatterMatching_CaseClasses extends App {
     def apply(a:Int, b:Int) = new MyA(a, b)
 
     def unapply(myA:MyA) : Option[(Int, Int)] = {  // here it is. it will be invoked every time when 'case' invoking against it
-      //这里是。 每当“情况”调用时都会被调用
+      //这里是,每当“class”调用时都会被调用
       // the body of unapply tells if the argument has matched or not
       //不适用的主体告诉参数是否匹配
       Some(myA.a, myA.b) // in our case it match all the time 在我们的情况下，它始终匹配
@@ -37,7 +38,7 @@ object PatterMatching_CaseClasses extends App {
   val myA = MyA(1, 2) // same as MyA.apply(1,2)
 
   myA match {
-      //例MyA（1,2）'将导致MyA.unapply（1,2）调用,有道理记住这一点
+      //例MyA(1,2)将导致MyA.unapply(1,2)调用,有道理记住这一点
     case MyA(1, 2) => println ("got (1,2)") // 'case MyA(1,2)' will lead to MyA.unapply(1,2) invocation. Make sense to remember this !
   }
 
@@ -54,13 +55,13 @@ object PatterMatching_CaseClasses extends App {
   // 3. a case class that accepts a function as a parameter (what would happen ? )
   //3.接受函数作为参数的case类（将会发生什么？）
   {
-    //预期功能为参数的case class
+    //预期函数为参数的case class
     case class F( f: Int => Int) // the case class that expects a function as parameter
     //函数返回两次以上
     def f(a:Int) = {a + a} // function that returns back in two time more than it gets
 
     val obj = F(f)
-    //其实..它是一个返回一个函数的getter。 像预期一样工作。
+    //其实..它是一个返回一个函数的getter,像预期一样工作。
     val f_ref = obj.f // actually.. it is a getter that returns a function. works like expected.
     println("result:"  + f_ref(2))
 

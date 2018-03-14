@@ -5,7 +5,7 @@ import scala.collection.generic.SeqFactory
 
 
 // #pattern-definition, #PatVarDef  #pattern-matching  #extractor #unapply
-
+//模式匹配,抽取
 object PatternValDefinitionExample extends App {
 
   // #1
@@ -61,10 +61,12 @@ object PatternValDefinitionExample extends App {
     // same as
 
     // 4.3
-    val (count2, fruit2) = "100 Cars"  match { case Pattern( count, fruit) => (count, fruit)  }
+    val (count2, fruit2) = "100 Cars"  match {
+      case Pattern( count, fruit) => (count, fruit)
+    }
 
     // So, 4.1 is just sugared for short. That is just pattern matching.
-    //
+    //所以,4.1只是简单的短,这只是模式匹配,
     println (s"count0, fruit0: $count0, $fruit0") // .. 100, Cars
     println (s"count1, fruit1: $count1, $fruit1") // .. 100, Cars
     println (s"count1, fruit2: $count2, $fruit2") // .. 100, Cars

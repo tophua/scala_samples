@@ -16,6 +16,7 @@ object PartialToReal extends App {
 
 
     // jut check that we on the right way
+    // 但请检查我们是否正确
     val defined = pf1.isDefinedAt(1)
     println ("defined: " + defined)  // true
 

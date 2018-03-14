@@ -26,6 +26,7 @@ object PartialFunctionTest extends App {
 
 
   // 2, the option to define this function as "PartialFunction" to expect 0 argument that leads
+  // 2,将此函数定义为“PartialFunction”以期望引出0参数的选项
   val divide2 = new PartialFunction[Int, Int] {  // first param represents argument, 2nd - returning value
 
     def apply(d: Int): Int = 10 / d   // apply has all our function's logic

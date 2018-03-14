@@ -25,7 +25,7 @@ object PatternMatchingTest extends App {
     case _ => "default"                 // wil fail in RUNTIME "scala.MatchError" if miss this part when x2 <= 1  !!!
       //所以，规则是所有的情况下都应该被覆盖
   }                                     // so, the rule is all cases should be covered !
-  //如果x = 2，则打印：“多于一个”。 当x2 = 1时打印：“默认”
+  //如果x = 2,则打印：“more than one”,当x2 = 1时打印:“default”
   println (str2) // prints: "more than one" if x=2. And prints: "default" when x2=1
 
   // 3. Nested cases. !!
@@ -44,11 +44,11 @@ object PatternMatchingTest extends App {
     case List(_,_,3) => println("yes, there is '3' as a last element")
   }
   list match {
-      //将不被打印，因为它匹配2长参数列表
+      //将不被打印,因为它匹配2长参数列表
     case List(_,_) => println("yes, there are two element defined") // will NOT be printed because it match to 2 long args list
-      //将不会被打印，因为它匹配1长参数列表
+      //将不会被打印,因为它匹配1长参数列表
     case List(_) => println("could not find what to match 1") // will NOT be printed because it match to 1 long args list
-      //将被打印，因为“* _”表示任何参数
+      //将被打印,因为“* _”表示任何参数
     case List(_*) => println("could not find what to match 2") // will be printed because '*_' means any args
   }
 
