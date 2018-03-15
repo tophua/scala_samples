@@ -16,5 +16,9 @@ object MapOption {
     println("====>"+mapOption.isEmpty)
     mapOption.++(colors2)
     println("====>"+mapOption.isEmpty)
+
+    import scala.collection.JavaConversions._
+    //Convert Java Map to Scala Map
+    //val myScalaMap = myJavaMap.mapValues(_.toSet)
   }
 }

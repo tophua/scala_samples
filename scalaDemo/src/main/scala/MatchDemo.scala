@@ -184,6 +184,7 @@ object MatchDemo extends App{
       case Nothing => ""
     }
     // Note that amt is printed nicely, thanks to the generated toString
+    //值得注意的是,AMT是印刷好,由于生成的方法
     println(amt + ": " + result)
   }
 

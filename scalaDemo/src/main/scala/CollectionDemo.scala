@@ -47,7 +47,7 @@ object CollectionDemo extends  App {
   val vec = (1 to 1000000) map (_ % 100)
   // map transforms a Range into a Vector
   val lst = vec.toList
-  //泛型匿名函数
+  //泛型匿名函数,按名称传递函数
   def time[T](block: => T) = {
     val start = System.nanoTime
     val result = block

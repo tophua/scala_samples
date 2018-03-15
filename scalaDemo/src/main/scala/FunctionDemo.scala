@@ -15,6 +15,7 @@ object FunctionDemo extends App {
   Array(3.14, 1.42, 2.0) map { (x: Double) => 3 * x }
 
   "Mary had a little lamb".split(" ").sortWith(_.length < _.length).foreach(println _)
+  println()
   //匿名方法定义
   def runInThread(block: () => Unit) {
     new Thread {
@@ -23,7 +24,10 @@ object FunctionDemo extends App {
   }
 
 
-  runInThread { () => println("Hi") ; Thread.sleep(10000); println("Bye") }
+  runInThread { () => println("Hi") }
+  Thread.sleep(10000)
+  println("Bye")
+  println()
   //匿名方法定义,缺省扩号
   def runInThreada(block: => Unit) {
     new Thread {
@@ -31,7 +35,10 @@ object FunctionDemo extends App {
     }.start()
   }
 
-  runInThreada { println("Hi") ; Thread.sleep(1000); println("Bye") }
+  runInThreada { println("Hi") }
+  Thread.sleep(1000)
+  println("Bye")
+  println()
   //克里化函数
   def until(condition: => Boolean)(block: => Unit) {
     if (!condition) {

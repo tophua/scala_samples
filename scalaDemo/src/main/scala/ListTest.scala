@@ -60,6 +60,30 @@ object ListTest {
     println("list(1):"+List(1))
     //indices返回所有有效索引值
     List("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday").indices.map(index =>println(index))
+    val bigData = List("Hadoop","Spark")
+    val data = List(1,2,3)
+
+    // 数组由head tail两部分组成：head表示第一个元素，tail表示其它元素
+    val bigDataCore = "Hadoop" :: ("Spark"::Nil );
+    val dataInt = 1 :: 2 :: 3 :: Nil
+
+    // 是否为空
+    println(data.isEmpty);
+    // 第一个元素：  1
+    println(data.head)
+    // 其它元素：2,3
+    println(data.tail);
+
+
+    // 提取bigData中元素内容，数组中的元素长度，必须和List()中参数一致
+    val List(a,b) = bigData;
+    // 执行结果：a=Hadoop,b=Spark
+    println("a="+a+",b="+b);
+
+    // 第一个元素，第二个元素，及余其它的元素及List
+    val x::y::rest = data
+    // 执行结果：x=1,y=2,rest=List(3)
+    println("x="+x+",y="+y+",rest="+rest);
   }
 
 }
